@@ -29,7 +29,7 @@ class AbstractComicsViewController: UIViewController {
         searchController.obscuresBackgroundDuringPresentation = false
         navigationItem.searchController = searchController
         navigationItem.hidesSearchBarWhenScrolling = false
-        searchController.searchBar.tintColor = #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+        searchController.searchBar.tintColor = #colorLiteral(red: 0.5568627451, green: 0.5568627451, blue: 0.5764705882, alpha: 1)
         searchController.hidesNavigationBarDuringPresentation = false
         
         //this line is important to avoid uisearchviewcontroller incorrect behaviour that can cause a black screen
@@ -61,7 +61,7 @@ class AbstractComicsViewController: UIViewController {
                 
                 cell.titleLabel.text = comic.title
                 cell.descriptionLabel.text = comic.descript ?? "No description available"
-                cell.starButton.tintColor = comic.wishlist ? #colorLiteral(red: 0.9686274529, green: 0.78039217, blue: 0.3450980484, alpha: 1) : #colorLiteral(red: 0.6666666865, green: 0.6666666865, blue: 0.6666666865, alpha: 1)
+                cell.starButton.tintColor = comic.wishlist ? #colorLiteral(red: 0.9254901961, green: 0.768627451, blue: 0, alpha: 1) : #colorLiteral(red: 0.6039215686, green: 0.6078431373, blue: 0.6039215686, alpha: 1)
                 cell.priceLabel.text = "$\(comic.price)"
                 
                 cell.starButton.rx.bind(to: self.viewModel.selectComicAction, input: comic)
